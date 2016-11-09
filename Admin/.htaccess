@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^$ controllers/index.php
+RewriteRule ^list-products$ controllers/list-products.php
+RewriteRule ^insert-products$ controllers/insert-products.php
+RewriteRule ^update-products$ controllers/update-products.php
+RewriteRule ^delete-products$ controllers/delete-products.php
+RewriteRule ^list-orders$ controllers/list-orders.php
+RewriteRule ^list-customers$ controllers/list-customers.php
+RewriteRule ^order-details$ controllers/order-details.php
+RewriteRule ^order-ship$ controllers/order-ship.php
+RewriteRule ^list-new-orders$ controllers/list-new-orders.php

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<ul style="list-style-type:none">
+    <li style="display:inline;"> <a href="/admin/list-orders">Sipariş Listesi</a> </li>
+    <li style="display: inline;"> <a href="/admin/list-products">Ürün Listesi</a> </li>
+    <li style="display: inline;"> <a href="/admin/list-new-orders">Yeni Sipariş Listesi</a> </li>
+</ul>
+<h1> Müşteri Listeniz </h1>
+
+<table width="80%" style="border-collapse: collapse" border="1" cellspacing="0" cellpadding="5">
+
+    <tr>
+        <th> Id</th>
+        <th> First Name</th>
+        <th> Last Name</th>
+        <th> E-Mail</th>
+        <th> Password</th>
+        <th> All Orders from that Customer</th>
+    </tr>
+
+    <?
+        foreach ($customers as $customer) { ?>
+            <tr>
+                <td><?= $customer->id ?> </td>
+                <td><?= $customer->first_name ?> </td>
+                <td><?= $customer->last_name ?> </td>
+                <td><?= $customer->email ?> </td>
+                <td><?= $customer->password ?> </td>
+                <td><a href="/admin/list-orders?customer=<?= $customer->id ?>">Click Here to see all orders</a></td>
+            </tr>
+        <?
+    }?>
+</body>
+</html>
+
+
+

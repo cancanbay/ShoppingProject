@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table width="80%" style="border-collapse: collapse" border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <th> Id</th>
+        <th> Quantity</th>
+        <th> Product</th>
+        <th> Amount</th>
+        <th> Size</th>
+        <th> Color</th>
+    </tr>
+    <?
+    foreach ($items as $item) {
+        $product = Product::get($item->product);
+        ?>
+        <tr>
+            <td><?= $item->id ?> </td>
+            <td><?= $item->quantity ?> </td>
+            <td><?= $product->name ?> </td>
+            <td><?= $item->amount ?> </td>
+            <td><?= $item->size ?></td>
+            <td><?= $item->color ?></td>
+        </tr>
+    <? } ?>
+</table><br>
+        <form  name="frmKargola" method="post" action="/admin/order-ship?id=<?= $order->id ?>">
+        İsim: <input type="text" name="txtName" value="<?= $customers[0]-> first_name ?>">
+        Soyisim: <input type="text" name="txtLastname" value="<?= $customers[0]-> last_name ?>"><br><br>
+        Adres: <textarea name="taAddress"><?= $order->address ?></textarea><br><br>
+        <input type="submit" name="btnKargola" value="Kargola">
+            </form>
+</body>
+</html>
+
+
+

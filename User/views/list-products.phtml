@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" type="text/css" href="../user/style.css">
+    <meta charset="utf-8">
+    <title>  <?= $product[0]-> gender ?> türündeki ürünler </title>
+</head>
+<body>
+<?  require __DIR__ . "/header-menu.phtml"; ?>
+<br><br><br>
+<? foreach ($product as $products) { ?>
+<table>
+    <tr>
+         <td><img src= "<?= $products->imageurl ?>" width="175px" height="200px"></td>
+    </tr>
+    <tr>
+        <td> <a href ="/user/urun?id=<?= $products->id ?>"><?= $products->name ?></a></td>
+    </tr>
+    <tr>
+        <td>  Fiyat:<?= $products->price ?> TL</td>
+    </tr>
+
+</table>
+<? } ?>
+</body>
+</html>
+
+
+

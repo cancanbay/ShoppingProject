@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteRule ^$ controllers/index.php
+RewriteRule ^anasayfa$ controllers/index.php
+RewriteRule ^urun$ controllers/show-product.php
+RewriteRule ^urunler$ controllers/list-products.php
+RewriteRule ^sepetim$ controllers/shopping-cart.php
+RewriteRule ^sepete-ekle$ controllers/add-to-cart.php
+RewriteRule ^siparis$ controllers/order-details.php
+RewriteRule ^siparisonay$ controllers/create-order.php
+RewriteRule ^girisyap$ controllers/login.php
+RewriteRule ^kayitol$ controllers/register.php
+RewriteRule ^cikis$ controllers/logout.php

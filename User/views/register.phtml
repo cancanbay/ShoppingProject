@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" type="text/css" href="../user/style.css">
+    <meta charset="utf-8">
+    <title> Ana Sayfa </title>
+</head>
+<body>
+<form method="post" action="kayitol" name="registerform" >
+<table>
+    <tr>
+        <td style="font-family: Verdana"> İsim: <input type="text" name="name"> </td>
+    </tr>
+    <tr>
+        <td style="font-family: Verdana"> Soyisim: <input type="text" name="lastname"> </td>
+    </tr>
+    <tr>
+        <td style="font-family: Verdana"> E-Mail: <input type="text" name="email"> </td>
+    </tr>
+    <tr>
+        <td style="font-family: Verdana"> Şifre: <input type="password" name="password"> </td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="register" value="Kayıt Yap"></td>
+    </tr>
+</table>
+</form>
+<?  require __DIR__ . "/../views/header-menu.phtml"; ?>
+</body>
+</html>
+
+
+

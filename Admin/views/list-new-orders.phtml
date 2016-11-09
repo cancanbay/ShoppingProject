@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>Yeni Gelen Sipariş Listesi</h1>
+<table width="80%" style="border-collapse: collapse" border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <th> Id</th>
+        <th> Customer #</th>
+        <th> Address</th>
+        <th> State</th>
+        <th> Date</th>
+        <th> Sent_Date</th>
+        <th> Total Amount</th>
+        <th> Details for Order</th>
+    </tr>
+
+    <? foreach($orders as $order) { ?>
+        <tr>
+            <td><?= $order->id ?> </td>
+            <td><?= $order->customer ?> </td>
+            <td><?= $order->address ?> </td>
+            <td><?= $order->state ?> </td>
+            <td><?= $order->date ?> </td>
+            <td><?= $order->sent_date ?> </td>
+            <td><?= $order->total_amount ?> </td>
+            <td><a href="/admin/order-details?order=<?= $order->id ?>">Detaylar </a></td>
+        </tr>
+    <? } ?>
+</body>
+</html>
+
+
+

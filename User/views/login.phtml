@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" type="text/css" href="../user/style.css">
+    <meta charset="utf-8">
+    <title> Ana Sayfa </title>
+</head>
+<body>
+<form method="post" action="girisyap" name="loginform">
+<table>
+    <tr>
+        <td style="font-family: Verdana">E-Mail: <input type="text" name="email"> </td>
+    </tr>
+    <tr>
+        <td style="font-family: Verdana">Şifre: <input type="password" name="password"> </td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Giriş Yap" name="login"></td>
+    </tr>
+</table>
+</form>
+<?  require __DIR__ . "/../views/header-menu.phtml"; ?>
+</body>
+</html>
+
+
+

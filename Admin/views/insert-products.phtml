@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1> Yeni Ürün Ekleme Sayfası </h1>
+    <form name="forminsert" method="post" action="/admin/insert-products">
+        Kategori : <select name="kategori">
+            <option name="tisort" value="TShirt">TShirt</option>
+            <option name="sort" value="Şort">Şort</option>
+            <option name="gomlek" value="Gömlek">Gömlek</option>
+            <option name="elbise" value="Elbise">Elbise</option>
+            <option name="ayakkabi" value="Ayakkabı">Ayakkabı</option>
+            <option name="corap" value="Çorap">Çorap</option>
+            <option name="pantolon" value="Pantolon">Pantolon</option>
+        </select><br><br>
+        Kategori : <select name="cinsiyet">
+            <option name="bayan" value="bayan" >Bayan</option>
+            <option name="erkek" value="erkek" >Erkek</option>
+            <option name="unisex" value="unisex">Unisex</option>
+            <option name="genccocuk" value="genccocuk" >Genç-Çocuk</option>
+        </select><br><br>
+        Ürün Adı: <input type="text" name="txtName"/><br><br>
+        Beden: <select name="beden">
+            <option name="xsmall" value="XSmall">XSmall</option>
+            <option name="small" value="Small">Small</option>
+            <option name="medium" value="Medium">Medium</option>
+            <option name="large" value="Marge">Large</option>
+            <option name="xlarge" value="XLarge">XLarge</option>
+        </select><br><br>
+        Miktar : <input type="text" name="txtQuantity"/><br><br>
+        Renk : <select name="renk">
+            <option name="siyah" value="Siyah">Siyah</option>
+            <option name="beyaz" value="Beyaz">Beyaz</option>
+            <option name="sari" value="Sarı">Sarı</option>
+            <option name="yesil" value="Yeşil">Yesil</option>
+            <option name="kirmizi" value="Kırmızı">Kirmizi</option>
+            <option name="mavi" value="Mavi">Mavi</option>
+        </select><br><br>
+        Fotoğraf linki : <input type="text" name="imgUrl"/><br><br>
+        Ücret : <input type="text" name="price"/> TL<br><br>
+        
+        <input type="submit" value="Kaydet"/>
+    </form>
+    </body>
+</html>

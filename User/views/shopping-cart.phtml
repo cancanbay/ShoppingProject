@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" type="text/css" href="../user/style.css">
+    <meta charset="utf-8">
+    <title>  </title>
+</head>
+<body>
+<form method="post" action="siparis" name="frmOrder">
+<? include __DIR__ . "/../views/header-menu.phtml"; ?>
+
+<h1 style="text-align: center"> Sepetiniz </h1>
+<? $i=0; foreach($array as $product){ ?>
+    <table>
+        <hr>
+        <tr>
+            <td><h3><a href = "urun?id=<?= $product->id ?>"><?= $product->name?></a></h3> </td>
+        </tr>
+        <tr>
+            <td rowspan="4"><img src="<?= $product->imageurl?>" width="175" height="200"></td>
+            <td><?= $product->price?> TL</td>
+        </tr>
+        <tr>
+            <td> Beden: <?= $cart->items[$i]->size ?></td>
+        </tr>
+        <tr>
+            <td> Miktar: <?= $cart->items[$i]->quantity ?></td>
+        </tr>
+        <tr>
+            <td> Renk: <?= $cart->items[$i]->color   ?></td>
+        </tr>
+<? $i++; } ?>
+        <tr>
+            <td> <h1> Toplam Ücret: <?= $cart->getTotal(); ?>TL</h1></td>
+        </tr>
+        <tr>
+            <td>  <input type="submit" value="Siparişe Devam Et"></td>
+        </tr>
+    </table>
+
+
+</form>
+</body>
+</html>
+
+
+

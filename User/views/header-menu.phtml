@@ -1,0 +1,19 @@
+<ul id="nav">
+    <li><a href="/user/anasayfa">Ana Sayfa</a></li>
+    <li><a href="/user/urunler?category=bayan">Bayan</a></li>
+    <li><a href="/user/urunler?category=erkek">Erkek</a></li>
+    <li><a href="/user/urunler?category=unisex">Unisex</a></li>
+    <li><a href="/user/urunler?category=genccocuk">Genç-Çocuk</a></li>
+    <li><a href="/user/sepetim">Sepetim</a></li>
+    <? if (isset($_SESSION['customer'])) {?>
+        <li>Hoşgeldiniz,<?= $_SESSION['customer']->first_name . " " . $_SESSION['customer']->last_name ?></li>
+    <? } ?>
+    <?if (!isset($_SESSION['customer'])) {?>
+        <li><a href="/user/girisyap">Giriş Yap</a></li>
+        <li><a href="/user/kayitol">Kayıt Ol</a></li>
+    <? } ?>
+    <?if (isset($_SESSION['customer'])) {?>
+        <li><a href="/user/cikis">Çıkış</a></li>
+    <? } ?>
+
+</ul>

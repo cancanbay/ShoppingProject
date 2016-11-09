@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" type="text/css" href="../user/style.css">
+    <meta charset="utf-8">
+    <title> <?= $products->name ?> sadece Can Factory'de </title>
+</head>
+<body>
+<? require_once __DIR__ . "/../views/header-menu.phtml"; ?>
+<form method="post" action="sepete-ekle" >
+    <br><br>
+    <h1> <?= $products->name ?> </h1>
+    <input type="hidden" name="product" value="<?= $products->id?>" >
+<!--    <input type="hidden" name="size" value="--><?//= $products->size?><!--" >-->
+<!--    <input type="hidden" name="quantity" value="--><?//= $products->quantity?><!--" >-->
+<!--    <input type="hidden" name="color" value="--><?//= $products->color?><!--" >-->
+    <input type="hidden" name="fiyat" value="<?= $products->price?>">
+<table>
+    <tr>
+        <td><img src= "<?= $products->imageurl ?>" width="175px" height="200px"></td>
+    </tr><br><br>
+
+    <tr>
+        <td>Beden: <select name="beden">
+                <option name="xsmall" value="XSmall">XSmall</option>
+                <option name="small" value="Small">Small</option>
+                <option name="medium" value="Medium">Medium</option>
+                <option name="large" value="Large">Large</option>
+                <option name="xlarge" value="XLarge">XLarge</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Miktar: <input type="text" name="txtQuantity" /> </td>
+    </tr>
+    <tr>
+        <td> Renk : <select name="renk">
+                <option name="siyah" value="Siyah">Siyah</option>
+                <option name="beyaz" value="Beyaz">Beyaz</option>
+                <option name="sari" value="Sarı">Sarı</option>
+                <option name="yesil" value="Yeşil">Yesil</option>
+                <option name="kirmizi" value="Kırmızı">Kirmizi</option>
+                <option name="mavi" value="Mavi">Mavi</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Ücret: <?= $products->price ?> TL</td>
+    </tr>
+    <tr>
+        <td>Kategori: <?= $products->category ?></td>
+    </tr>
+    <tr>
+            <td><input type="submit" value="Sepete Ekle" name="btnSepeteEkle"/></td>
+    </tr>
+    
+</table>
+</form>
+</body>
+</html>
+
+
+
